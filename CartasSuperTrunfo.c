@@ -28,11 +28,12 @@ Serão duas cartas com as seguintes informações
         
         printf("Para iniciarmos o jogo, identificaremos a primeira carta: \n");
         printf("Digite o codigo da primeira carta: \n");
-        scanf("%s", &codigo1);
+        scanf("%s", codigo1);
 
         printf("Digite o nome da cidade: \n");
-        scanf("%s", &cidade1);
-
+        getchar();
+        fgets(cidade1, 20, stdin);
+      
         printf("Qual o número de habitantes? \n");
         scanf("%d", &população1);
 
@@ -47,11 +48,12 @@ Serão duas cartas com as seguintes informações
 
         printf("Muito bem, agora vamos dar sequencia para a segunda carta: \n");
         printf("Digite o codigo da segunda carta: \n");
-        scanf("%s", &codigo2);
+        scanf("%s", codigo2);
 
         printf("Digite o nome da cidade: \n");
-        scanf("%s", &cidade2);
-
+        getchar();
+        fgets(cidade2, 20, stdin);
+        
         printf("Qual o número de habitantes? \n");
         scanf("%d", &população2);
 
