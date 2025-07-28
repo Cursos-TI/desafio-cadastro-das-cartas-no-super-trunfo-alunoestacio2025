@@ -12,10 +12,10 @@ Serão duas cartas com as seguintes informações
 #include <stdio.h>
     int main(){
 
-        char codigo1[4];
-        char codigo2[4];
-        char cidade1[20];
-        char cidade2[20];
+        fgets codigo1[4];
+        fgets codigo2[4];
+        fgets cidade1[20];
+        fgets cidade2[20];
         int população1;
         int população2;
         float area1;
@@ -28,10 +28,10 @@ Serão duas cartas com as seguintes informações
         
         printf("Para iniciarmos o jogo, identificaremos a primeira carta: \n");
         printf("Digite o codigo da primeira carta: \n");
-        scanf("%s", &codigo1);
+        scanf("%s", codigo1);
 
         printf("Digite o nome da cidade: \n");
-        scanf("%s", &cidade1);
+        scanf("%s", cidade1);
 
         printf("Qual o número de habitantes? \n");
         scanf("%d", &população1);
@@ -47,10 +47,10 @@ Serão duas cartas com as seguintes informações
 
         printf("Muito bem, agora vamos dar sequencia para a segunda carta: \n");
         printf("Digite o codigo da segunda carta: \n");
-        scanf("%s", &codigo2);
+        scanf("%s", codigo2);
 
         printf("Digite o nome da cidade: \n");
-        scanf("%s", &cidade2);
+        scanf("%s", cidade2);
 
         printf("Qual o número de habitantes? \n");
         scanf("%d", &população2);
