@@ -10,15 +10,15 @@ Serão duas cartas com as seguintes informações
 
 */
 #include <stdio.h>
-    int main(){
-        // Comandos para otimizar o codigo:
-        // 1- Função para limpar o buffer do teclado
+
+     //   Comandos para otimizar o codigo:
+    // 1 - Função para limpar o buffer do teclado
     void limpaBuffer() {
         int c;
         while ((c = getchar()) != '\n' && c != EOF);
     }
-        
-        // Inicio do codigo
+
+    int main(){
 
         char codigo1[4];
         char codigo2[4];
