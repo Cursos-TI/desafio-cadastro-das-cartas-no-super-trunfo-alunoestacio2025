@@ -79,7 +79,7 @@ Serão duas cartas com as seguintes informações
         printf("A primeira carta contém as seguintes informações: \n");
         printf("Codigo: %s \n", codigo1);
         printf("Cidade: %s \n", cidade1);
-        printf("Número de habitantes: %.d \n", população1);
+        printf("Número de habitantes: %d \n", população1);
         printf("A area é de %.3f km² \n", area1);
         printf("PIB da carta: %.3f dolares \n", PIB1);
         printf("Número de pontos turisticos: %d \n", pontos1);
