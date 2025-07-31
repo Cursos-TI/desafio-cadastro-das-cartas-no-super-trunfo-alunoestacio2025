@@ -27,8 +27,8 @@
         char codigo2[4];
         char cidade1[20];
         char cidade2[20];
-        float populacao1;
-        float populacao2;
+        int populacao1;
+        int populacao2;
         float area1;
         float area2;
         float PIB1;
@@ -49,7 +49,7 @@
         fgets(cidade1, 20, stdin);
       
         printf("Qual o número de habitantes? \n");
-        scanf("%f", &populacao1);
+        scanf("%d", &populacao1);
 
         printf("Qual a area em km²? \n");
         scanf("%f", &area1);
@@ -69,7 +69,7 @@
         fgets(cidade2, 20, stdin);
         
         printf("Qual o número de habitantes? \n");
-        scanf("%f", &populacao2);
+        scanf("%d", &populacao2);
 
         printf("Qual a area em km²? \n");
         scanf("%f", &area2);
@@ -101,11 +101,11 @@
         printf("Codigo: %s \n", codigo2);
         printf("Cidade: %s \n", cidade2);
         printf("Número de habitantes: %d \n", populacao2);
-        printf("A area é de %.3f km² \n", area2);
+        printf("A area é de: %.3f km² \n", area2);
         printf("PIB da carta: %.3f dolares \n", PIB2);
         printf("Número de pontos turisticos: %d \n", pontos2);
-        printf("A cidade desta carta contém %.3f habitantes por km²", mediapopcid2);
-        printf("A riqueza média por pessoa desta carta é aproximadamente de %.2f mil dolares", mediapib2);
+        printf("A cidade desta carta contém %.3f habitantes por km² \n", mediapopcid2);
+        printf("A riqueza média por pessoa desta carta é aproximadamente de %.2f mil dolares \n", mediapib2);
 
     
     
