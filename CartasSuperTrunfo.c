@@ -91,7 +91,7 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         printf("A carta_1 contém as seguintes informações: \n");
         printf("Codigo: %s \n", codigo1);
         printf("Cidade: %s \n", cidade1);
-        printf("Número de habitantes: %d \n", populacao1);
+        printf("Número de habitantes: %lu \n", populacao1);
         printf("A area é de: %.3f km² \n", area1);
         printf("PIB da carta: %.3f dolares \n", PIB1);
         printf("Número de pontos turisticos: %d \n", pontos1);
@@ -101,7 +101,7 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         printf("A carta_2 contém as seguintes informações: \n");
         printf("Codigo: %s \n", codigo2);
         printf("Cidade: %s \n", cidade2);
-        printf("Número de habitantes: %d \n", populacao2);
+        printf("Número de habitantes: %lu \n", populacao2);
         printf("A area é de %.3f km² \n", area2);
         printf("PIB da carta: %.3f dolares \n", PIB2);
         printf("Número de pontos turisticos: %d \n", pontos2);
@@ -111,10 +111,10 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
 
         // Invertendo a densidade populacional:
 
-        signed inversopopcid1;
-        signed inversopopcid2;
-        inversopopcid1 = 1 / mediapopcid1;
-        inversopopcid2 = 1 / mediapopcid2;
+        double inversopopcid1;
+        double inversopopcid2;
+        inversopopcid1 = (float)1 / mediapopcid1;
+        inversopopcid2 = (float)1 / mediapopcid2;
 
         // Calculando o poder:
 
@@ -130,19 +130,11 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         printf("Comparando as cartas: \n");
         printf("População: Carta_1 vence? (%d) \n", populacao1 > populacao2);
         printf("Área: Carta_1 vence? (%d) \n", area1 > area2);
-        printf("PIB: Carta_2 vence? (%d) \n", PIB1 > PIB2);
-        printf("Pontos Turisticos: Carta_2 vence? (%d) \n", pontos1 > pontos2);
+        printf("PIB: Carta_2 vence? (%d) \n", PIB2 > PIB1);
+        printf("Pontos Turisticos: Carta_2 vence? (%d) \n", pontos2 > pontos1);
         printf("Densidade Populacional: Carta_1 vence? (%d) \n", mediapopcid1 > mediapopcid2);
-        printf("PIB per Capita: Carta_2 vence? (%d) \n", mediapib1 > mediapib2);
+        printf("PIB per Capita: Carta_2 vence? (%d) \n", mediapib2 > mediapib1);
         printf("Poder: Carta_1 vence? (%d) \n", poderCarta1 > poderCarta2);
-
-    
-    
-    
-
-
-
 
     return 0;
     }
-    
