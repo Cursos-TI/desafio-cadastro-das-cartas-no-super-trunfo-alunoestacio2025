@@ -125,16 +125,49 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         printf("O poder da carta_1 é de %f \n", poderCarta1);
         printf("O poder da carta_2 é de %f \n", poderCarta2);
 
-        // Exibir o resultado da comparação das cartas:
+        // Duelo entre as cartas:
+        unsigned int i;
+        printf("A seguir você deverá escolher uma opção referente às informações obtidas das cartas.\n");
+        printf("Após escolher uma opção, as cartas irão travar um duelo baseado na sua escolha.\n");
+        printf("Após o duelo uma será declarada vencedora!\n");
+        printf("Escolha sabiamente uma das opções:");
+        printf("1.População      2.Área      3.PIB      4.Pontos Turisticos \n5.Densidade Populacional     6.PIB per Capita      7.Poder \nDigite o número escolhido:");
+        scanf("%u", &i);
+        if (i == 1){ 
+          if (populacao1 > populacao2){ printf("A carta_1 vence!!!\n");
+          } else { printf("A carta_2 vence!!!\n");}
+        }
+        if (i == 2){ 
+          if (area1 > area2){ printf("A carta_1 vence!!!\n");
+          } else { printf("A carta_2 vence!!!\n");}
+        }
+        if (i == 3){ 
+          if (PIB1 > PIB2){ printf("A carta_1 vence!!!\n");
+          } else { printf("A carta_2 vence!!!\n");}
+        }
+        if (i == 4){ 
+          if (pontos1 > pontos2){ printf("A carta_1 vence!!!\n");
+          } else { printf("A carta_2 vence!!!\n");}
+        }
+        if (i == 5){ 
+          if (mediapopcid1 > mediapopcid2){ printf("A carta_1 vence!!!\n");
+          } else { printf("A carta_2 vence!!!\n");}
+        }
+        if (i == 6){ 
+          if (mediapib1 > mediapib2){ printf("A carta_1 vence!!!\n");
+          } else { printf("A carta_2 vence!!!\n");}
+        }
+        if (i == 7){ 
+          if (poderCarta1 > poderCarta2){ printf("A carta_1 vence!!!\n");
+          } else { printf("A carta_2 vence!!!\n");}
+        }
 
-        printf("Comparando as cartas: \n");
-        printf("População: Carta_1 vence? (%d) \n", populacao1 > populacao2);
-        printf("Área: Carta_1 vence? (%d) \n", area1 > area2);
-        printf("PIB: Carta_2 vence? (%d) \n", PIB2 > PIB1);
-        printf("Pontos Turisticos: Carta_2 vence? (%d) \n", pontos2 > pontos1);
-        printf("Densidade Populacional: Carta_1 vence? (%d) \n", mediapopcid1 > mediapopcid2);
-        printf("PIB per Capita: Carta_2 vence? (%d) \n", mediapib2 > mediapib1);
-        printf("Poder: Carta_1 vence? (%d) \n", poderCarta1 > poderCarta2);
+
+
+
+
+
+
 
     return 0;
     }
