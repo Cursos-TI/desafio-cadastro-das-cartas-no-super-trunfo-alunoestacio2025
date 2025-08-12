@@ -112,7 +112,7 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         printf("Cidade: %s \n", cidade1);
         printf("Número de habitantes: %lu \n", populacao1);
         printf("A area é de: %.3f km² \n", area1);
-        printf("PIB da carta: %.3f dolares \n", PIB1);
+        printf("PIB da carta: %.3f  mil dolares \n", PIB1);
         printf("Número de pontos turisticos: %d \n", pontos1);
         printf("A cidade desta carta contém %.3f habitantes por km² \n", mediapopcid1);
         printf("A riqueza média por pessoa desta carta é aproximadamente de %.2f mil dolares \n", mediapib1);
@@ -123,7 +123,7 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         printf("Cidade: %s \n", cidade2);
         printf("Número de habitantes: %lu \n", populacao2);
         printf("A area é de %.3f km² \n", area2);
-        printf("PIB da carta: %.3f dolares \n", PIB2);
+        printf("PIB da carta: %.3f mil dolares \n", PIB2);
         printf("Número de pontos turisticos: %d \n", pontos2);
         printf("A cidade desta carta contém %.3f habitantes por km² \n", mediapopcid2);
         printf("A riqueza média por pessoa desta carta é aproximadamente de %.2f mil dolares \n", mediapib2);
@@ -146,65 +146,69 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
           printf("#### Duelo entre população ####\n");
           printf("A maior população vencerá.\n");
           printf("Iniciando o duelo...\n");
+          if (populacao1 > populacao2){ printf("A carta_1 vence!!!\n");
+          } else if (populacao1 < populacao2){ printf("A carta_2 vence!!!\n");
+          } else { printf("#### O duelo deu empate ####\n");}
           break;
+
         case 2:
           printf("#### Duelo entre Área ####\n");
           printf("A maior Área vencerá.\n");
           printf("Iniciando o duelo...\n");
+          if (area1 > area2){ printf("A carta_1 vence!!!\n");
+          } else if (area1 < area2){ printf("A carta_2 vence!!!\n");
+          } else { printf("#### O duelo deu empate ####\n");}
           break;
+
           case 3:
           printf("#### Duelo entre PIB ####\n");
           printf("A maior PIB vencerá.\n");
           printf("Iniciando o duelo...\n");
+          if (PIB1 > PIB2){ printf("A carta_1 vence!!!\n");
+          } else if (PIB1 < PIB2){ printf("A carta_2 vence!!!\n");
+          } else { printf("#### O duelo deu empate ####\n");}
           break;
+
           case 4:
           printf("#### Duelo entre Pontos Turisticos ####\n");
           printf("Quem possuir mais Pontos Turisticos vencerá.\n");
           printf("Iniciando o duelo...\n");
+          if (pontos1 > pontos2){ printf("A carta_1 vence!!!\n");
+          } else if (pontos1 < pontos2){ printf("A carta_2 vence!!!\n");
+          } else { printf("#### O duelo deu empate ####\n");}
           break;
+          
           case 5:
           printf("#### Duelo entre Densidade Populacional ####\n");
           printf("Quem possuir menor Densidade Populacional vencerá.\n");
           printf("Iniciando o duelo...\n");
+          if (mediapopcid1 < mediapopcid2){ printf("A carta_1 vence!!!\n");
+          } else if (mediapopcid1 > mediapopcid2){ printf("A carta_2 vence!!!\n");
+          } else { printf("#### O duelo deu empate ####\n");}
           break;
+
           case 6:
           printf("#### Duelo entre PIB per Capita ####\n");
           printf("A maior PIB per Capita vencerá.\n");
           printf("Iniciando o duelo...\n");
+          if (mediapib1 > mediapib2){ printf("A carta_1 vence!!!\n");
+          } else if (mediapib1 < mediapib2){ printf("A carta_2 vence!!!\n");
+          } else { printf("#### O duelo deu empate ####\n");}
+          break;
+
           case 7:
           printf("#### Duelo entre Poder ####\n");
           printf("O maior Poder vencerá.\n");
           printf("Iniciando o duelo...\n");
+          if (poderCarta1 > poderCarta2){ printf("A carta_1 vence!!!\n");
+          } else if (poderCarta1 < poderCarta2){ printf("A carta_2 vence!!!\n");
+          } else { printf("#### O duelo deu empate ####\n");}
           break;
+
         default:
-          printf("#### Opção inválida ####\n");
+          printf("#### Opção inválida ####\\n");
           break;
         }
-        
-        //RESULTADO
-        if (i == 1){ 
-          if (populacao1 > populacao2){ printf("A carta_1 vence!!!\n");
-          } else if (populacao1 < populacao2){ printf("A carta_2 vence!!!\n");}
-        } else if (i == 2){ 
-          if (area1 > area2){ printf("A carta_1 vence!!!\n");
-          } else if (area1 < area2){ printf("A carta_2 vence!!!\n");}
-        } else if (i == 3){ 
-          if (PIB1 > PIB2){ printf("A carta_1 vence!!!\n");
-          } else if (PIB1 < PIB2){ printf("A carta_2 vence!!!\n");}
-        } else if (i == 4){ 
-          if (pontos1 > pontos2){ printf("A carta_1 vence!!!\n");
-          } else if (pontos1 < pontos2){ printf("A carta_2 vence!!!\n");}
-        } else if (i == 5){ 
-          if (mediapopcid1 < mediapopcid2){ printf("A carta_1 vence!!!\n");
-          } else if (mediapopcid1 > mediapopcid2){ printf("A carta_2 vence!!!\n");}
-        } else if (i == 6){ 
-          if (mediapib1 > mediapib2){ printf("A carta_1 vence!!!\n");
-          } else if (mediapib1 < mediapib2){ printf("A carta_2 vence!!!\n");}
-        } else if (i == 7){ 
-          if (poderCarta1 > poderCarta2){ printf("A carta_1 vence!!!\n");
-          } else if (poderCarta1 < poderCarta2){ printf("A carta_2 vence!!!\n");}
-        } else { printf("#### O duelo deu empate ####\n");}
-
 
 
 
