@@ -51,9 +51,17 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
       
         printf("Qual o número de habitantes? \n");
         scanf("%lu", &populacao1);
+          while ( populacao1 == 0 ){
+          printf("Você deve digitar um valor maior referente à população. \n");
+          printf("Sugestão: Digite um valor acima de 2000. \n");
+          scanf("%lu", &populacao1);}
 
-        printf("Qual a area em km²? \n");
+        printf("Qual a área em km²? \n");
         scanf("%f", &area1);
+            while ( area1 == 0 ){
+          printf("Você deve digitar um valor maior referente à área. \n");
+          printf("Sugestão: Digite um valor acima de 20000Km². \n");
+          scanf("%f", &area1);}
 
         printf("Valor do PIB da cidade: \n");
         scanf("%f", &PIB1);
@@ -73,9 +81,17 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         
         printf("Qual o número de habitantes? \n");
         scanf("%lu", &populacao2);
+          while ( populacao2 == 0 ){
+          printf("Você deve digitar um valor maior referente à população. \n");
+          printf("Sugestão: Digite um valor acima de 2000. \n");
+          scanf("%lu", &populacao2);}
 
         printf("Qual a area em km²? \n");
         scanf("%f", &area2);
+          while ( area2 == 0 ){
+          printf("Você deve digitar um valor maior referente à área. \n");
+          printf("Sugestão: Digite um valor acima de 20000Km². \n");
+          scanf("%f", &area2);}
 
         printf("Valor do PIB da cidade: \n");
         scanf("%f", &PIB2);
@@ -101,8 +117,8 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         // Calculando o poder:
 
         float poderCarta1, poderCarta2;
-        poderCarta1 = populacao1 + area1 + PIB1 + mediapib1 + pontos1 + inversopopcid1;
-        poderCarta2 = populacao2 + area2 + PIB2 + mediapib2 + pontos2 + inversopopcid2;
+        poderCarta1 = populacao1 + area1 + PIB1 + pontos1 + inversopopcid1;
+        poderCarta2 = populacao2 + area2 + PIB2 + pontos2 + inversopopcid2;
 
         // INFORMAÇÕES:
         printf("O jogo será baseados nas seguintes informações: \n\n\n");
