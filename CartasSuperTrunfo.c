@@ -146,91 +146,107 @@ populacional deve estar invertida(Dividir o numero 1 pelo valor, o resultado fic
         printf("O poder da carta_2 é de %f \n\n\n", poderCarta2);
 
         // Duelo entre as cartas:
-        unsigned int i;
-        printf("A seguir você deverá escolher uma opção referente às informações obtidas das cartas.\n");
-        printf("Após escolher uma opção, as cartas irão travar um duelo baseado na sua escolha.\n");
-        printf("Após o duelo uma será declarada vencedora!\n");
-        printf("Escolha sabiamente uma das opções:\n");
-        printf("1.População      2.Área      3.PIB      4.Pontos Turisticos \n5.Densidade Populacional     6.PIB per Capita      7.Poder \nDigite o número escolhido: \n");
-        scanf("%u", &i);
-        
-        printf("\n\n\n");
+        int resultado1, resultado2;
+        int primeiroatributo, segundoatributo;
 
-        switch (i)
+        printf("Você deverá escolher dois atributos referentes às informações obtidas das cartas.\n");
+        printf("Após escolher o primeiro e o segundo atributo, as cartas irão travar um duelo baseado nas suas escolhas.\n");
+        printf("Após o duelo uma será declarada vencedora!\n");
+        printf("######## ATENÇÃO ########\n");
+        printf("Você será eliminado automaticamente caso digite um número que não esteja nas opções!!!\n");
+        printf("Escolha o primeiro atributo. \n");
+        printf("1.População      2.Área      3.PIB      4.Pontos Turisticos \n5.Densidade Populacional     6.PIB per Capita      7.Poder \nDigite o número escolhido: \n");
+        scanf("%d", &primeiroatributo);
+        
+        printf("\n");
+ 
+        switch (primeiroatributo)
         {
         case 1:
-          printf("#### Duelo entre população ####\n");
-          printf("A maior população vencerá.\n");
-          printf("Iniciando o duelo...\n");
-          if (populacao1 > populacao2){ printf("A carta_1 vence!!!\n");
-          } else if (populacao1 < populacao2){ printf("A carta_2 vence!!!\n");
-          } else { printf("#### O duelo deu empate ####\n");}
+          printf("Você escolheu opção 1.População!!! \n");
+          resultado1 = populacao1 > populacao2 ? 1 : 0;      
           break;
-
         case 2:
-          printf("#### Duelo entre Área ####\n");
-          printf("A maior Área vencerá.\n");
-          printf("Iniciando o duelo...\n");
-          if (area1 > area2){ printf("A carta_1 vence!!!\n");
-          } else if (area1 < area2){ printf("A carta_2 vence!!!\n");
-          } else { printf("#### O duelo deu empate ####\n");}
+          printf("Você escolheu opção 2.Área!!! \n");
+          resultado1 = area1 > area2 ? 1 : 0;      
           break;
-
-          case 3:
-          printf("#### Duelo entre PIB ####\n");
-          printf("A maior PIB vencerá.\n");
-          printf("Iniciando o duelo...\n");
-          if (PIB1 > PIB2){ printf("A carta_1 vence!!!\n");
-          } else if (PIB1 < PIB2){ printf("A carta_2 vence!!!\n");
-          } else { printf("#### O duelo deu empate ####\n");}
-          break;
-
+        case 3:
+          printf("Você escolheu opção 3.PIB!!! \n");
+          resultado1 = PIB1 > PIB2 ? 1 : 0;      
+          break;        
           case 4:
-          printf("#### Duelo entre Pontos Turisticos ####\n");
-          printf("Quem possuir mais Pontos Turisticos vencerá.\n");
-          printf("Iniciando o duelo...\n");
-          if (pontos1 > pontos2){ printf("A carta_1 vence!!!\n");
-          } else if (pontos1 < pontos2){ printf("A carta_2 vence!!!\n");
-          } else { printf("#### O duelo deu empate ####\n");}
-          break;
-          
+          printf("Você escolheu opção 4.Pontos Turisticos!!! \n");
+          resultado1 = pontos1 > pontos2 ? 1 : 0;      
+          break;        
           case 5:
-          printf("#### Duelo entre Densidade Populacional ####\n");
-          printf("Quem possuir menor Densidade Populacional vencerá.\n");
-          printf("Iniciando o duelo...\n");
-          if (mediapopcid1 < mediapopcid2){ printf("A carta_1 vence!!!\n");
-          } else if (mediapopcid1 > mediapopcid2){ printf("A carta_2 vence!!!\n");
-          } else { printf("#### O duelo deu empate ####\n");}
-          break;
-
+          printf("Você escolheu opção 5.Densidade Populacional!!! \n");
+          resultado1 = mediapopcid1 < mediapopcid2 ? 1 : 0;      
+          break;        
           case 6:
-          printf("#### Duelo entre PIB per Capita ####\n");
-          printf("A maior PIB per Capita vencerá.\n");
-          printf("Iniciando o duelo...\n");
-          if (mediapib1 > mediapib2){ printf("A carta_1 vence!!!\n");
-          } else if (mediapib1 < mediapib2){ printf("A carta_2 vence!!!\n");
-          } else { printf("#### O duelo deu empate ####\n");}
-          break;
-
+          printf("Você escolheu opção 6.PIB per Capita!!! \n");
+          resultado1 = mediapib1 > mediapib2 ? 1 : 0;      
+          break;        
           case 7:
-          printf("#### Duelo entre Poder ####\n");
-          printf("O maior Poder vencerá.\n");
-          printf("Iniciando o duelo...\n");
-          if (poderCarta1 > poderCarta2){ printf("A carta_1 vence!!!\n");
-          } else if (poderCarta1 < poderCarta2){ printf("A carta_2 vence!!!\n");
-          } else { printf("#### O duelo deu empate ####\n");}
-          break;
-
+          printf("Você escolheu opção 7.Poder!!! \n");
+          resultado1 = poderCarta1 > poderCarta2 ? 1 : 0;      
+          break;        
         default:
-          printf("#### Opção inválida ####\\n");
+        printf("#### Opção inválida / Você fracassou ####\\n");
+          break;
+        }
+        printf("\n\n");
+        printf("Escolha o segundo atributo. \n");
+        printf("1.População      2.Área      3.PIB      4.Pontos Turisticos \n5.Densidade Populacional     6.PIB per Capita      7.Poder \nDigite o número escolhido: \n");
+        scanf("%d", &segundoatributo);
+
+        while (primeiroatributo == segundoatributo){
+           printf("O segundo atributo deverá ser diferente do primeiro. \n");
+           scanf("%d", &segundoatributo);
+           printf("\n\n");
+        } 
+
+          switch (segundoatributo)
+        {
+        case 1:
+          printf("Você escolheu opção 1.População!!! \n");
+          resultado2 = populacao1 > populacao2 ? 1 : 0;      
+          break;
+        case 2:
+          printf("Você escolheu opção 2.Área!!! \n");
+          resultado2 = area1 > area2 ? 1 : 0;      
+          break;
+        case 3:
+          printf("Você escolheu opção 3.PIB!!! \n");
+          resultado2 = PIB1 > PIB2 ? 1 : 0;      
+          break;        
+          case 4:
+          printf("Você escolheu opção 4.Pontos Turisticos!!! \n");
+          resultado2 = pontos1 > pontos2 ? 1 : 0;      
+          break;        
+          case 5:
+          printf("Você escolheu opção 5.Densidade Populacional!!! \n");
+          resultado2 = mediapopcid1 < mediapopcid2 ? 1 : 0;      
+          break;        
+          case 6:
+          printf("Você escolheu opção 6.PIB per Capita!!! \n");
+          resultado2 = mediapib1 > mediapib2 ? 1 : 0;      
+          break;        
+          case 7:
+          printf("Você escolheu opção 7.Poder!!! \n");
+          resultado2 = poderCarta1 > poderCarta2 ? 1 : 0;      
+          break;        
+        default:
+        printf("#### Opção inválida / Você fracassou ####\\n");
           break;
         }
 
-
-
-
-
-
+        if (resultado1 && resultado2){
+          printf("###### Você venceu ##### \n");
+        } else if (resultado1 != resultado2){
+          printf ("Você empatou!!! \n");
+        }
+        else { printf("Você perdeu!!! \n");
+        }
 
     return 0;
     }
